@@ -1,0 +1,15 @@
+ for performance and better experience
+ 
+ 1.    Check Bundle Size
+    
+Lazy Loading Components
+Code Splitting
+Use a CDN for Static Assets
+Optimize Images and Videos
+Enable Gzip Compression
+Check Network Latency
+Minify JavaScript and CSS
+Service Workers for Caching
+Check for Unnecessary Re-renders
+Deploy to a Better Hosting Provider
+Check Browser Caching

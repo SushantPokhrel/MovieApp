@@ -1,0 +1,1171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Strike&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  background-color: #141414;
+  color: #fff;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  /* max-width: 100%; */
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+ul li {
+  font-weight: 500;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #01060b; /* color of the scrollbar */
+
+  border-radius: 10px; /* roundness of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: #e7e7e7; /*background of the thumb*/
+}
+/* css for header */
+nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7em 2em;
+  background-color: rgb(3 37 65);
+}
+nav h2 {
+  background: -webkit-linear-gradient(rgb(193, 7, 250), rgb(242, 11, 11));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 1.7rem;
+}
+
+.wrap-overlay.overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.div-logo {
+  flex: 1;
+}
+
+.div-form {
+  flex: 1;
+}
+.form-nav {
+  display: flex;
+  align-items: center;
+}
+.form-nav .input-search {
+  padding: 0.6em;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+  /* outline: 0; */
+  /* border: 1px solid; */
+}
+input[type="search"] {
+  background-color: white;
+  border-radius: 4px;
+  outline: 0;
+  font-weight: 500;
+  border: 1px solid;
+}
+input[type="search"]:focus {
+  border: 1px solid orange;
+}
+button {
+  border-radius: 4px;
+}
+
+.i-search {
+  font-size: 18px;
+  color: white;
+  margin: 2px 4px;
+}
+.btn-search {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0.6em;
+  box-shadow: 0 0 1px rgb(240, 239, 239);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.btn-search:active {
+  background-color: #a7a7a7;
+}
+
+.ul-container {
+  flex: 1;
+}
+.ul-container .ul-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+}
+.ul-container .ul-nav .li-nav-links {
+  cursor: pointer;
+  padding: 0.45em 0.7em;
+  transition: all 0.25s ease-in-out;
+  border-radius: 0.4em;
+  color: white;
+}
+
+/* css for landing page */
+.landing-container {
+  position: relative;
+  /* background-image: url(https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  transition: background-image 0.1s linear;
+}
+.landing-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+.landing-hero {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  width: 80%;
+  max-width: 700px;
+  margin: 1em auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.landing-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  line-height: 0.8;
+  color: #ffb90d;
+}
+.landing-hero p {
+  font-size: 1.1rem;
+}
+
+.form-landing {
+  position: relative;
+}
+.form-landing input {
+  width: 80%;
+  padding: 1em;
+}
+.search-landing {
+  position: absolute;
+  height: 30px;
+  right: 11%;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* css for trending */
+.trending-container {
+  padding: 1.7em 3em;
+}
+.trending-container h2,
+h4 {
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+.trending-flex {
+  display: flex;
+  gap: 0.8em;
+  overflow-x: scroll;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  transition: all 0.2s ease-in;
+  padding: 0.5em;
+}
+
+.img-trending {
+  object-fit: cover;
+  width: 100%;
+  width: 200px;
+  height: 250px;
+  border-radius: 12px;
+}
+/* .card,
+.card-1 h4 {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+.rel-date {
+  color: white;
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.vote {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  border-top: 3px solid cyan;
+  border-bottom: 3px solid red;
+  border-radius: 50%;
+  padding: 7px;
+}
+/*css for movie component */
+.movie-container {
+  padding: 1em 1em;
+
+}
+.movie-container h2 {
+  text-align: center;
+  margin: 1.4em 0;
+}
+.card-1-movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  row-gap: 1.2em;
+}
+
+.card-1 {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.4em;
+  margin-bottom: 1em;
+  transition: all 0.25s ease-in;
+}
+.card-1 h4 {
+  color: white;
+}
+
+.img-movies {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-radius: 14px;
+}
+
+.card-1 .rel-date {
+  color: #dedede;
+  opacity: 0.8;
+}
+.btn-watchlist,
+.watch-trailer {
+  background-color: #e5cf09;
+  color: black;
+  text-decoration: none;
+  border-radius: 26px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.8em 1.7em;
+  margin: 0.2em;
+  transition: all 0.25s ease-in-out;
+}
+.btn-watchlist:hover {
+  background-color: #beac06;
+}
+.fa-play {
+  margin-right: 0.4em;
+  color: #01060b;
+}
+.watch-trailer {
+  background-color: #007bff;
+}
+.watch-trailer:hover {
+  background-color: #0664c9;
+}
+/* css for detailing of movies and shows */
+
+/* .watchlist-btn-cokntainer{
+  margin: 0.4em;
+  display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.details-btn-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+} */
+
+.flex-trailer {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  /* transition: all 0.28s linear; */
+}
+.flex-trailer a {
+  color: white;
+  background-color: blue;
+  padding: 0.8em 2.5em;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  border-radius: 24px;
+}
+.flex-trailer i {
+  align-self: center;
+}
+
+/* footer css */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(3 37 65);
+  padding: 2.4em 0;
+  color: white;
+}
+.img-tmdb {
+  height: 55px;
+  width: 55px;
+  object-fit: contain;
+}
+.span-footer {
+  background: -webkit-linear-gradient(rgb(193, 7, 250), rgb(242, 11, 11));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+/* all css */
+.div-all {
+  position: relative;
+  width: 85%;
+  margin: 1em auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* min-height: 100vh; */
+  gap: 10px;
+  row-gap: 10px;
+}
+
+.notfound-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: #f4f4f4;  */
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+.notfound-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.notfound-message {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.notfound-button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.all-header {
+  padding: 2em;
+}
+/* trailer-home css */
+.trailer-home {
+  padding: 1em 3em;
+}
+/* .trailer-home h2,h3{
+  color: black;
+} */
+.trailers-swipeable {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 1em;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.trailer-home-card iframe {
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+}
+/* arrow-top */
+.arrow-top {
+  border-radius: 3px;
+  position: fixed;
+  padding: 8px;
+  right: 0.8em;
+  bottom: 1em;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  cursor: pointer;
+}
+.arrow-top i {
+  color: white;
+  font-size: 18px;
+}
+.arrow-top.visible {
+  display: block;
+}
+.arrow-top.hidden {
+  display: none;
+}
+.ham-bg-container {
+  display: none;
+  cursor: pointer;
+  align-self: flex-end;
+  padding-top: 4px;
+}
+/* .ham-bg {
+  font-size: 21px;
+} */
+.bars {
+  width: 24px;
+  height: 24px;
+}
+.fa-circle-xmark {
+  display: none;
+  transition: all 0.25s ease-in-out;
+}
+.fa-circle-xmark:active {
+  color: #696969;
+}
+/* form and login
+ */
+.login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url(https://thumbs.dreamstime.com/b/multimedia-video-wall-television-broadcast-hand-holding-remote-control-128441458.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.login h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgb(32, 32, 32);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label-text {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+a {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.fa-arrow-left {
+  display: none;
+  transition: all 0.25s ease;
+  padding: 4px;
+}
+
+.fa-arrow-left:active {
+  background-color: rgb(194, 194, 194);
+}
+/* coming soon movies css */
+.coming-soon {
+  padding: 3em;
+}
+.coming-soon h2 {
+  color: white;
+}
+.watchlist {
+  min-height: 80vh;
+  padding: 2em 1em;
+}
+.watchlist h3 {
+  color: white;
+}
+.watchlist a {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  display: inline-block;
+  margin: 0.6em;
+  padding: 0.6em 1.5em;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.watchlist a:active {
+  opacity: 0.8;
+}
+.watchlist .watchlist-card {
+  display: flex;
+  gap: 1.3em;
+  border-bottom: 1px solid rgb(210, 210, 210);
+  padding-bottom: 0.5em;
+}
+.watchlist .watchlist-card img {
+  height: 100%;
+  width: 200px;
+}
+.col-watchlist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  flex: 1;
+}
+.watchlist-card-container {
+  max-width: 800px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.rmv-watchlist {
+  color: red;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.25s ease;
+}
+.rmv-watchlist:active {
+  background-color: #dedede;
+}
+/* skeleton-css */
+.skeleton-small {
+  width: 100%;
+  height: 300px;
+}
+.img-skeleton {
+  border-radius: 8px;
+}
+
+.loader {
+  height: 50px;
+  width: 50px;
+  border: 5px solid rgb(206, 206, 206);
+  border-top: 5px solid blue;
+  border-radius: 50%;
+  animation: spin 1.4s linear infinite;
+  margin: 7em 47%;
+  transition: all 0.3s linear;
+}
+.loader::after {
+  display: block;
+  margin: 5px;
+  content: "404";
+  color: red;
+}
+
+/* rate-details */
+.rate-item {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+.rate-item i {
+  color: white;
+}
+.rate-item a:nth-child(1) {
+  color: greenyellow;
+  transition: all 0.25s ease-in;
+}
+.rate-item a:nth-child(2) {
+  color: red;
+  transition: all 0.25s ease-in;
+}
+.rate-item a:active {
+  scale: 1.1;
+}
+
+/* loader animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.watchlist-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* genre */
+.genre-list {
+  /* margin: 0 auto; */
+}
+.genre-ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.2em 0;
+  gap: 0.3em;
+  align-items: center;
+  justify-content: center;
+}
+.genre-item {
+  flex-shrink: 0;
+  font-size: 15px;
+  padding: 0.6em 1.5em;
+  background-color: #bf0810;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+/* trailer details */
+
+.back-arrow-div {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+/* Detail Container */
+.detail-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay for Background */
+.detail-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+/* Flex Details Style */
+.flex-details {
+  display: flex;
+  position: relative;
+  z-index: 3; /* Bring content above overlay */
+  max-width: 1200px;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Info Section Style */
+.info-section {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+/* Button Styles */
+
+/* Rate Item Styles */
+.rate-item {
+  margin-top: 20px;
+}
+
+/* See More Button */
+.see-more-btn {
+  background: #333; /* Dark grey background */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+/* Loader */
+.loader {
+  margin: 20px 0;
+}
+
+.img-trailer {
+  width: 300px;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.load-more-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+
+
+}
+.btn-load-more{
+  display: inline-block;
+  background-color: white;
+  color: #01060b;
+  font-size: 15px;
+  padding: 0.6em 1.3em;
+  border-radius: 20px;
+  font-weight: 500;
+
+}
+.btn-load-more:active{
+  background-color: #ffffffe9;
+}
+/* media queries for diff screen sizes */
+@media screen and (min-width: 950px) {
+  .form-nav .input-search {
+    width: 70%;
+  }
+  .form-nav .input-search:focus {
+    /* border: 1px solid orange; */
+    width: 75%;
+  }
+  .genre-item:hover {
+    opacity: 0.8;
+  }
+  .genre-item:active {
+    background-color: red;
+  }
+  .landing-container {
+    height: 90vh;
+  }
+  /* trailer-player */
+  .trailer-container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: black;
+    margin: 2em auto;
+    position: relative;
+  }
+  .trailer-container iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+  }
+
+  .close-player {
+    padding: 0.4em;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border-radius: 5px;
+  }
+  .close-player:hover {
+    background-color: rgb(45, 45, 45);
+  }
+
+  .notfound-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  .trailer-home-card iframe:hover {
+    transform: scale(1);
+  }
+  .flex-trailer:hover {
+    opacity: 0.7;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .ul-container .ul-nav .li-nav-links:hover {
+    color: orange;
+    background-color: rgb(4, 47, 82);
+  }
+
+  .card-1:hover {
+    transform: scale(1.05);
+  }
+  .see-more-btn:hover {
+    background: #555; /* Lighter grey on hover */
+  }
+}
+/* media queries for small  screens*/
+
+@media screen and (max-width: 949px) {
+  .trailer-container {
+    max-width: 600px;
+    margin: 1em auto;
+    position: relative;
+    padding: 1em;
+  }
+  .trailer-container iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .close-player {
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    background-color: #141414;
+    padding: 0.7em;
+    border-radius: 4px;
+  }
+  .close-player:active {
+    background-color: #01060b;
+  }
+  .flex-details {
+    flex-direction: column;
+  }
+
+  /* for back arrows */
+  .back-arrow-div {
+    padding: 0.5em 0;
+  }
+
+  .watchlist .watchlist-card {
+    flex-direction: column; /* justify-content: center; */
+  }
+  .watchlist .watchlist-card img {
+    height: 250px;
+  }
+
+  .fa-arrow-left {
+    font-size: 19px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    top: 8px;
+  }
+
+  .ul-nav {
+    position: fixed;
+    left: -100%;
+    transition: all 0.25s ease-in-out;
+    top: 0.1em;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .ul-container {
+    flex: 0;
+  }
+  nav {
+    padding: 1em 1.3em;
+    justify-content: space-between;
+    gap: 0.2em;
+  }
+  .ham-bg-container {
+    display: block;
+    color: white;
+  }
+
+  .div-logo {
+    flex: 0;
+  }
+  /* .landing-hero h1 {
+    font-size: 2.4rem;
+  } */
+  .landing-hero p {
+    font-size: 15px;
+  }
+
+  .trending-container {
+    padding: 1.4em 1em;
+  }
+  .coming-soon {
+    padding: 1.4em 1em;
+  }
+  .trailer-home {
+    padding: 1.4em 1em;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+
+  .show-nav {
+    top: 0em;
+    left: 0;
+    background-color: black;
+    width: 100%;
+  }
+  .show-nav a {
+    width: 100%;
+    text-align: center;
+  }
+  .show-nav a li {
+    font-size: 20px;
+  }
+  .show-nav a :active {
+    background-color: #7e7e7e;
+  }
+  .fa-circle-xmark {
+    display: inline-block;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    color: white;
+    font-size: 25px;
+  }
+  .form-nav {
+    justify-content: center;
+  }
+  .card-1 {
+    width: 150px;
+  }
+  .card-1 span {
+    font-size: 13px;
+  }
+  .notfound-container {
+    min-height: 90vh;
+  }
+  .notfound-button {
+    font-size: 1rem;
+  }
+  .detail-container {
+    flex-wrap: wrap;
+  }
+  .landing-hero {
+    width: 95%;
+  }
+  .landing-hero h1 {
+    font-size: 2.6rem;
+  }
+  .landing-container {
+    min-height: 70vh;
+  }
+  /* genre */
+  .genre-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .info-section {
+    font-size: 15px;
+  }
+  .btn-search {
+    box-shadow: none;
+  }
+  .btn-watchlist,
+  .watch-trailer {
+    font-size: 12px;
+  }
+  .genre-item {
+    font-size: 12px;
+  }
+  .landing-container {
+    height: 70vh;
+    background-position: center;
+  }
+
+  .i-search {
+    font-size: 15px;
+  }
+  .input-search.show-input {
+    display: inline-block;
+    width: auto;
+    display: inline-block;
+    width: auto;
+    background: transparent;
+    padding: 0.4em 0.7em;
+    box-shadow: 0 0 2px #ecececef;
+    color: #ffffffef;
+  }
+
+  .btn-search {
+    padding: 0.3em;
+  }
+  nav {
+    padding: 0.8em 0.5em;
+  }
+
+  .skeleton-small {
+    width: 145px;
+  }
+  .img-skeleton {
+    width: 100%;
+  }
+  .div-all {
+    width: 90%;
+  }
+  .card-1 {
+    width: 145px;
+  }
+  .div-logo {
+    flex: 1;
+  }
+  .hide-input {
+    display: none;
+  }
+
+  .div-form {
+    display: flex;
+    justify-content: end;
+  }
+  .card-1-movie-container a {
+    display: flex;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .div-logo h2 {
+    font-size: 1.2rem;
+  }
+  .landing-hero {
+    text-align: left;
+  }
+  .search-landing {
+    top: 9px;
+    right: 22%;
+  }
+
+  .rate-item i {
+    font-size: 14px;
+  }
+  .rate-item a {
+    font-size: 13px;
+  }
+  .flex-details {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2em 1em;
+  }
+  .img-trailer {
+    width: 250px;
+  }
+  .landing-hero h1 {
+    font-size: 2.2rem;
+  }
+  .landing-hero {
+    max-width: 400px;
+  }
+  .landing-hero p {
+    width: 85%;
+  }
+}
+
+/* Back Arrow Style */
